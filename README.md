@@ -22,4 +22,5 @@ API https://coinmarketcap.com/api/
 
 ## Screenshots 
 
-![Alt text](./screenshots/scr1.png?raw=true "Screen 1")
+![Screen 1](./screenshots/scr1.PNG?raw=true "Screen 1")
+![Screen 2](./screenshots/scr2.PNG?raw=true "Screen 2")
