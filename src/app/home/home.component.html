@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md">Name(symbol)</div>
+            <div class="col-md">Market Cap</div>
+            <div class="col-md">Price</div>
+            <!-- <div class="col">Volume (24h)</div> -->
+            <div class="col-md">Circulating Supply</div>
+            <div class="col-md">Change (24h)</div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="card" *ngFor="let currency of currencies">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md">{{ currency.name }}({{currency.symbol}})</div>
+              <div class="col-md">{{ currency.market_cap_usd | currency }}</div>
+              <div class="col-md">{{ currency.price_usd | currency }}</div>
+              <!-- <div class="col">{{ currency.24h_volume_usd }}</div> -->
+              <div class="col-md">{{ currency.available_supply | number }} BTC</div>
+              <div [ngClass]="{'col-md': true, 'positive': currency.percent_change_24h>0, 'negative': currency.percent_change_24h<0}">{{ currency.percent_change_24h | number:'2.2-2' }}%</div>
+            </div>
+          </div>
+        </div>
+        <div class="card" (click)="showMore()" style="cursor: pointer;">
+            <div class="card-body" style="text-align: center">
+              <h5 class="card-title">Show more</h5>
+          </div>
+  
+</div>
